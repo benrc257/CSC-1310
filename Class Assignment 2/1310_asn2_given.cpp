@@ -165,14 +165,12 @@ bool isMember(int* myArray, int num, int size) {
 }
 
 void stringReverser(string input, int size) {
-	string output = input;
 
-	if (size > 0) {
-		input[size-1] = output[input.size()-(size-1)];
-		size--;
+	if ((input.size()/2) != size) {
+		input+=input[size];
 		stringReverser(input, size);
 	} else {
-		cout << "\nReversed string: " << output;
+		cout << "\nReversed string: " << input.substr(size);
 		return;
 	}
 }

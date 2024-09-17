@@ -49,8 +49,12 @@ int main()
 				cout << "\n\nSUM OF NUMBERS\n";
 				cout << "Enter an integer:  ";
 				cin >> num;
+<<<<<<< HEAD
 				cout << "The sum of numbers is:" << sumOfNumbers(num) << "\n"; //cout sum of numbers
 				
+=======
+				cout << "The sum of numbers is: " << sumOfNumbers(num);
+>>>>>>> 3ac5010 (rebase)
 				break;
 				
 				
@@ -67,11 +71,19 @@ int main()
 				{
 					cout << myArray[x] << " ";
 				}
+<<<<<<< HEAD
 				
 				if (isMember(myArray, num, ARRAY_SIZE)) { //num is a member of myArray
 					cout << "\n" << num << " is a member of the array.";
 				} else { //num is not a member of myArray
 					cout << "\n" << num << " is not a member of the array.";
+=======
+
+				if (isMember(myArray, num, ARRAY_SIZE)) { //if isMember returns true, num is within myArray
+
+				} else { //else, num is not within myArray
+
+>>>>>>> 3ac5010 (rebase)
 				}
 				
 				break;
@@ -82,13 +94,21 @@ int main()
 				cout << "Enter a string and I will reverse it:  ";
 				cin.ignore();
 				getline(cin, userString);
+<<<<<<< HEAD
 				stringReverser(userString, userString.size()); //calls stringReverser
+=======
+				//call string reverser function here
+>>>>>>> 3ac5010 (rebase)
 				
 				break;
 				
 				
 			case 4:
+<<<<<<< HEAD
 				/*cout << "\n\nPALINDROME DETECTOR\n";
+=======
+				cout << "\n\nPALINDROME DETECTOR\n";
+>>>>>>> 3ac5010 (rebase)
 				cout << "Enter a string and I will tell you if it is a palindrome:  ";
 				cin.ignore();
 				getline(cin, userString);
@@ -100,7 +120,11 @@ int main()
 				}
 				
 				//remove spaces and commas from string
+<<<<<<< HEAD
 				userStrModified = userString;
+=======
+				/*userStrModified = userString;
+>>>>>>> 3ac5010 (rebase)
 				for(int x=0; x<userStrModified.size(); x++)
 				{
 					if(userStrModified[x] == ' ') 
@@ -111,11 +135,19 @@ int main()
 					{
 						userStrModified.erase(x, 1);
 					}
+<<<<<<< HEAD
 				}
 				
 				//print out whether the user's string is a palindrome or not here.
 				//when you print out the user's string, print out the uppercase version that doesn't have the spaces removed.
 				*/
+=======
+				}*/
+				
+				//print out whether the user's string is a palindrome or not here.
+				//when you print out the user's string, print out the uppercase version that doesn't have the spaces removed.
+				
+>>>>>>> 3ac5010 (rebase)
 				break;
 				
 				
@@ -141,16 +173,26 @@ int main()
 int sumOfNumbers(int num) {
 	int sum = num;
 
+<<<<<<< HEAD
 	if (num > 0) { //while num is greater than zero, continue decrementing num and adding it to sum
 		num--;
 		sum+=sumOfNumbers(num);
 	}
 
 	return sum; //return the total of the addition
+=======
+	if (num > 0) { //decrements num by one then reruns the function until num reaches 0, adding the return value to sum
+		num--;
+		sum += sumOfNumbers(num);
+	}
+
+	return sum;
+>>>>>>> 3ac5010 (rebase)
 }
 
 bool isMember(int* myArray, int num, int size) {
 
+<<<<<<< HEAD
 	if (size > 0) { //if size (the index) is greater than or equal to 0, continue with the function
 		if (num == myArray[size-1]) { //if num is found, return true
 			return true;
@@ -176,3 +218,17 @@ void stringReverser(string input, int size) {
 		return;
 	}
 }
+=======
+	if (size >= 0) {
+		if (num == myArray[size]) {
+			return true;
+		} else {
+			size--;
+			isMember(myArray, num, size);
+		}
+	} else {
+		return false;
+	}
+
+}
+>>>>>>> 3ac5010 (rebase)

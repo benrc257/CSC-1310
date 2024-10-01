@@ -49,8 +49,12 @@ int main()
 				cout << "\n\nSUM OF NUMBERS\n";
 				cout << "Enter an integer:  ";
 				cin >> num;
+<<<<<<< HEAD
 				cout << "The sum of numbers is:" << sumOfNumbers(num) << "\n"; //cout sum of numbers
 				
+=======
+				cout << "The sum of numbers is: " << sumOfNumbers(num);
+>>>>>>> 3ac5010 (rebase)
 				break;
 				
 				
@@ -67,11 +71,19 @@ int main()
 				{
 					cout << myArray[x] << " ";
 				}
+<<<<<<< HEAD
 				
 				if (isMember(myArray, num, ARRAY_SIZE)) { //num is a member of myArray
 					cout << "\n" << num << " is a member of the array.";
 				} else { //num is not a member of myArray
 					cout << "\n" << num << " is not a member of the array.";
+=======
+
+				if (isMember(myArray, num, ARRAY_SIZE)) { //if isMember returns true, num is within myArray
+
+				} else { //else, num is not within myArray
+
+>>>>>>> 3ac5010 (rebase)
 				}
 				
 				break;
@@ -82,13 +94,18 @@ int main()
 				cout << "Enter a string and I will reverse it:  ";
 				cin.ignore();
 				getline(cin, userString);
+<<<<<<< HEAD
 				stringReverser(userString, userString.size()); //calls stringReverser
+=======
+				//call string reverser function here
+>>>>>>> 3ac5010 (rebase)
 				
 				break;
 				
 				
 			case 4:
 				/*cout << "\n\nPALINDROME DETECTOR\n";
+				cout << "\n\nPALINDROME DETECTOR\n";
 				cout << "Enter a string and I will tell you if it is a palindrome:  ";
 				cin.ignore();
 				getline(cin, userString);
@@ -101,6 +118,7 @@ int main()
 				
 				//remove spaces and commas from string
 				userStrModified = userString;
+
 				for(int x=0; x<userStrModified.size(); x++)
 				{
 					if(userStrModified[x] == ' ') 
@@ -150,7 +168,6 @@ int sumOfNumbers(int num) {
 }
 
 bool isMember(int* myArray, int num, int size) {
-
 	if (size > 0) { //if size (the index) is greater than or equal to 0, continue with the function
 		if (num == myArray[size-1]) { //if num is found, return true
 			return true;

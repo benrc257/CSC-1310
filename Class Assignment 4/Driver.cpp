@@ -1,5 +1,8 @@
-//LOOK!! ---------------------put your comment block here with title, author, date, & purpose
-
+/*
+	Author: Benjamin Clark
+	Date: 10/15/24
+	Purpose: To create an inventory item system using stacks for CSC 1310
+*/
 
 #include <iostream>
 #include "InvItem.h"
@@ -8,10 +11,10 @@ using namespace std;
 
 int main()
 {
-	//LOOK!!  -------------------create your InventoryItem stack on the line below and name it "stack"
-	
+	//-------------------create your InventoryItem stack on the line below and name it "stack"
+	DynamicStack<InvItem> stack;
 	//LOOK!! ---------------------create an inventory item object and name it "item"
-	
+	InvItem item;
 
 	int choice;						// Menu choice
 	long serial;					// Serial number
